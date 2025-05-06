@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="pay.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="payment_process.php" method="post">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Billing Address</h3>
+                    <div class="input-box">
+                        <span>Full Name :</span>
+                        <input type="text" name="billing_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Email :</span>
+                        <input type="email" name="billing_email" placeholder="example@example.com" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Address :</span>
+                        <input type="text" name="address" placeholder="Room - Street - Locality" required>
+                    </div>
+                    <div class="input-box">
+                        <span>City :</span>
+                        <input type="text" name="city" placeholder="New Delhi" required>
+                    </div>
+
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>State :</span>
+                            <input type="text" name="state" placeholder="India" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Zip Code :</span>
+                            <input type="number" name="zip_code" placeholder="123456" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Payment</h3>
+                    <div class="input-box">
+                        <span>Cards Accepted :</span>
+                        <img src="imgcards.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Name On Card :</span>
+                        <input type="text" name="card_name" placeholder="Mr. Your Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Credit Card Number :</span>
+                        <input type="number" name="card_number" placeholder="1111222233334444" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Exp. Month :</span>
+                        <input type="text" name="exp_month" placeholder="August" required>
+                    </div>
+                
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Exp. Year :</span>
+                            <input type="number" name="exp_year" placeholder="2025" required>
+                        </div>
+                        <div class="input-box">
+                            <span>CVV :</span>
+                            <input type="number" name="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden field for amount - you can set this dynamically based on course price -->
+            <input type="hidden" name="amount" value="999.00">
+            
+            <button type="submit" class="btn">Complete Payment</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

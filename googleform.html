@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 600px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 35%;
+            padding: 10px;
+            background-color: #dd00ff;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #dd00ff;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Google Form</h2>
+<form action="/submit_form" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" required>
+
+    <label for="city">City:</label>
+    <select id="city" name="city" required>
+        <option value="">Choose City</option>
+        <option value="Jaipur">Jaipur</option>
+        <option value="Kota">Kota</option>
+        <option value="Sikar">Sikar</option>
+        <option value="Jodhpur">Jodhpur</option>
+    </select>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="course">Course Interested In:</label>
+    <label class="container">JEE Mains
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">NEET
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">UPSC
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">GATE
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+    <label for="comments">Interested in any other course? Let Us Know:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

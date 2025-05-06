@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+    <link rel="stylesheet" href="homestyle.css">
+    <script>
+        // Check login status when page loads
+        window.onload = function() {
+            fetch('session_status.php')
+                .then(response => response.json())
+                .then(data => {
+                    const authLink = document.getElementById('auth-link');
+                    if (data.logged_in) {
+                        authLink.innerHTML = '<a href="logout.php" class="register-btn">Logout</a>';
+                    } else {
+                        authLink.innerHTML = '<a href="Login&singup.html" class="register-btn">Login/Signup</a>';
+                    }
+                })
+                .catch(error => console.error('Error checking login status:', error));
+        };
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container" style="display: flex; align-items: center; justify-content:space-between;">
+            <h1 class="logo">Course<span style="color: #04b204;">4U</span></h1>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li class="Courses1"><a href="#">Courses</a>
+                    <ul style="list-style: none;" class="ListOption">
+                        <a href="Registration.html">
+                            <li value="">JEE</li>
+                        </a>
+                        <a href="Registration.html">
+                            <li value="">NEET</li>
+                        </a>
+                        <a href="Registration.html">
+                            <li value="">UPSC</li>
+                        </a>
+                        <a href="Registration.html">
+                            <li value="">GATE</li>
+                        </a>
+                    </ul>
+                </li>
+                <li><a href="#AboutUs">About</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+                <li id="auth-link"><a href="Login&singup.html" class="register-btn">Login/Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h2 style="color: #333">Welcome to Course<span style="color: #04b204;">4U</span></h2>
+            <p style="color: #666;">Register for your favorite courses easily and efficiently</p>
+            <a href="coursereg.html" class="btn">Register for a Course</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Wide Range of Courses</h3>
+                    <p>We offer courses across various disciplines to suit your interests and career goals.</p>
+                </div>
+                <div class="card">
+                    <h3>Easy Registration</h3>
+                    <p>Quick and user-friendly registration process to save you time.</p>
+                </div>
+                <div class="card">
+                    <h3>24/7 Support</h3>
+                    <p>Our support team is here to help you anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="faq-section">
+        <div class="container"
+            style="border: 2px solid #04b204; padding-left: 10vh; padding-right: 10vh; padding-top: 5vh; padding-bottom: 5vh; background-color: #333; ">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <li>What courses do you offer?</li>
+                <p class="answer">We offer a wide range of courses from technology, business, arts, to personal
+                    development.</p>
+                
+            </div>
+            <div class="faq-item">
+                <li>How do I register for a course?</li>
+                <p class="answer">Click on the Register button and follow the easy registration steps to enroll in a
+                    course.</p>
+            </div>
+            <div class="faq-item">
+                <li>Can I get a refund if I am not satisfied?</li>
+                <p class="answer">Yes, we offer a 30-day refund policy if you are not satisfied with the course.</p>
+            </div>
+            <div class="faq-item">
+                <li>Is there any support available?</li>
+                <p class="answer">Yes, our support team is available 24/7 to assist you with any issues.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="About">
+        <div class="container"
+            style="border: 2px solid #04b204; padding-left: 10vh; padding-right: 10vh; padding-top: 5vh; padding-bottom: 5vh; background-color: #333; ">
+            <h2>About</h2>
+            <div class="AboutUs">
+                <p>Welcome to Course4U, your trusted partner in personal and professional growth. We are dedicated to providing high-quality, accessible, and diverse online courses designed to empower learners of all levels.  
+
+                    At Course4U, we believe education should be flexible and tailored to fit your lifestyle. Our expertly crafted courses span a wide range of subjects, from career development and technology to personal enrichment and wellness. With a focus on practical skills and real-world application, we aim to help you unlock your potential and achieve your goals.  
+                    
+                    Join our vibrant learning community and take the first step toward a brighter future—because at Course4U, your success is our priority.
+                                        </p>
+                
+            </div>
+        </section>
+            
+    <section class="ContactUs">
+        <div class="container"
+            style="border: 2px solid #04b204; padding-left: 10vh; padding-right: 10vh; padding-top: 5vh; padding-bottom: 5vh; background-color: #333; ">
+            <h2>Contact Us</h2>
+            <div class="Contact">
+                <li>Pratham Singh Panwar</li>
+                <p class="answer">Phone Number: 8690022874</p>
+                <p class="answer">Email: 2023pietcspratham128@poornima.org</p>
+                
+            </div>
+            <div class="Contact">
+                <li>Rishab Pugalia</li>
+                <p class="answer">Phone Number: 9366584429</p>
+                <p class="answer">Email: 2023pietcsrishab135@poornima.org</p>
+            </div>
+            
+        </div>
+    </section>
+    </div>
+
+
+
+
+</body>
+
+</html>

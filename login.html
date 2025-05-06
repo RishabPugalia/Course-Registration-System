@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="regis.css">
+    <style>
+        .login-options {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .login-options a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .login-options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="login_process.php" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Login</button>
+            </div>
+        </form>
+        <div class="login-options">
+            <p>Don't have an account? <a href="Registration.html">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>
